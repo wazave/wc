@@ -17,6 +17,8 @@ div > video {
 @media (max-aspect-ratio: 16/9) {
   div > video { width: 300%; left: -100%; }
 }
+
+
 @supports (object-fit: cover) {
   div > video {
     top: 0; left: 0;
@@ -27,22 +29,9 @@ div > video {
 * {
     font-family: 'Open Sans', sans-serif;
 }
-/*.top {
-    position: fixed;
-  top: 0; right: 0; bottom: 0; left: 0;
-  overflow: hidden;
-    height: 100vh;
-    width: 100vw;
-    background: rgba(0, 0, 50, .25);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}*/
-
 form {
     position: fixed;
     top: 0; right: 0; bottom: 0; left: 0;
-    overflow: hidden;
     height: 100vh;
     width: 100vw;
     background: rgba(0, 0, 50, .25);
@@ -51,12 +40,59 @@ form {
     align-items: center;
     flex-direction: column;
 }
-
 form div {
     display: flex;
+    flex-direction: row;
     box-shadow: 0 3px 10px rgba(0, 0, 50, .7);
     overflow: hidden;
     border-radius: 0.5rem;
+}
+.noshadow{
+    box-shadow: none;
+    display: flex;
+    flex-direction: column;
+    margin-top: 4rem;
+}
+
+p {
+    font-size: 2rem;
+    color: rgba(255, 255, 255, .75);
+    margin: 0 2rem 2rem 2rem;
+
+}
+
+.second {
+    margin-bottom: 2.2rem;
+    text-shadow: 0 3px 10px rgba(0, 0, 50, .8);
+}
+
+@media screen and (max-height: 500px){
+    form{
+        height: auto;
+        position: absolute;
+        margin: 0;
+        padding: 0;
+    }
+    .container{
+        overflow: scroll;
+        padding: 0;
+    }
+    .noshadow{
+        margin-top: 0;
+    }
+    p{
+        margin-bottom: 0.4rem;
+    }
+    .second {
+        margin-bottom: 0.5rem;
+    }
+}
+
+@media screen and (max-width: 400px){
+
+    form div {
+        flex-direction: column;
+    }
 }
 
 input{
@@ -87,29 +123,10 @@ input:focus{
    background: rgba(100, 200, 50, .9); 
 }
 
-.noshadow{
-    box-shadow: none;
-    display: flex;
-    flex-direction: column;
-    margin-top: 4rem;
-}
-
-p {
-    font-size: 2rem;
-    color: rgba(255, 255, 255, .75);
-    margin: 0 2rem 2rem 2rem;
-
-}
-
 .name{
     text-shadow: 0 3px 10px rgba(0, 0, 50, .8);
     color: rgba(200, 50, 50, .8);
     font-size: 4rem;
-}
-
-.second {
-    margin-bottom: 2.2rem;
-    text-shadow: 0 3px 10px rgba(0, 0, 50, .8);
 }
 
 .third {
