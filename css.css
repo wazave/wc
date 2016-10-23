@@ -111,12 +111,14 @@ input{
 
 input:focus{
     outline: none;
+    border-radius: 0;
 }
 
 .button {
     background: rgba(100, 200, 50, .8);
     color: #fff;
     font-weight: bold;
+    border-radius: 0;
 }
 
 .button:hover{
